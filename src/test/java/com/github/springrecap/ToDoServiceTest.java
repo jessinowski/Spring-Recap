@@ -34,6 +34,7 @@ class ToDoServiceTest {
         //WHEN
         List<ToDo> actual = service.getAll();
         //THEN
+        verify(repo).findAll();
         assertEquals(expected, actual);
     }
 
